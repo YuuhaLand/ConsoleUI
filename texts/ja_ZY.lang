@@ -1,0 +1,14 @@
+menu.play=プレイする
+menu.settings=遊び方 & オプション
+menu.store=Minecraft ストア
+
+progressScreen.loadingWorld=サーバーを初期化中
+progressScreen.savingLevel=セーブレベル
+
+options.multiplayergame=オンライン ゲーム
+
+resourcePack.vanilla.name=Minecraft
+resourcePack.vanilla.description=Minecraft 正統派のテクスチャ、 アイコン、ユーザー インターフェイス!
+hbui.CreateNewWorld.resourcePacks.globalMinecraftPackDescription=Minecraft 正統派のテクスチャ、 アイコン、ユーザー インターフェイス!
+
+pauseScreen.secondaryClientLeave=ゲームを終了

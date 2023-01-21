@@ -1,0 +1,20 @@
+{
+  "namespace": "settings_common",
+  
+  "option_toggle_state_template": {
+    "size": [ 16, 16 ]
+  },
+  
+  "option_toggle@settings_common.option_generic": {
+    "$control_name": "settings_common.option_toggle_control",
+    "$option_label|default": "",
+    "$label_offset": [ 20, 0 ],
+    "$toggle_tts_header": "$option_label",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$one_line_layout": true
+      }
+    ]
+  }
+}

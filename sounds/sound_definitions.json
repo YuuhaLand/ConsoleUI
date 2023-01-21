@@ -1,0 +1,20 @@
+{
+  "random.wood_click_ce": {
+    "category": "ui",
+    "sounds": [
+      "sounds/random/wood_click_ce"
+    ]
+  },
+  "random.return_ce": {
+    "category": "ui",
+    "sounds": [
+      "sounds/random/return_ce"
+    ]
+  },
+  "random.slider_click": {
+    "category": "ui",
+    "sounds": [
+      "sounds/random/slider_click"
+    ]
+  }
+}

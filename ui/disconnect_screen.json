@@ -1,0 +1,134 @@
+{
+  "namespace": "disconnect",
+
+  "player_list_back": {
+    "type": "image",
+    "size": [ "60%", "60%" ],
+    "texture": "textures/ui/dialog_background_opaque",
+    "controls": [
+      {
+        "main": {
+          "type": "panel",
+          "size": [ "100% - 15px", "100% - 10px" ],
+          "controls": [
+            {
+              "player_title": {
+                "type": "label",
+                "text": "progressScreen.message.unknownError",
+                "size": [ "100%", 20 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_text_color",
+                "layer": 2
+              }
+            },
+            {
+              "error_text@common.scrolling_panel": {
+                "size": [ "100%", "100% - 45px"],
+                "offset": [ 0, 15 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$show_background": false,
+                "$scroll_track_size": [ 5, "100% - 4px" ],
+                "$scroll_track_offset|default": [ -4, 2 ],
+                "$scrolling_content": "disconnect.error_texts"
+              }
+            },
+            {
+              "ok_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.menu_leave_screen",
+                "$button_text": "gui.ok",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 90,
+                "sound_name": "random.return_ce",
+                "size": [ "100%", 20 ],
+                "offset": [ 0, -3 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "error_texts": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "header_text": {
+          "type": "label",
+          "color": "$title_text_color",
+          "size": [ "100%", "default" ],
+          "text": "#disconnect_text",
+          "bindings": [
+            {
+              "binding_name": "#disconnect_text"
+            },
+            {
+              "binding_name": "#tts_dialog_body",
+              "binding_condition": "once"
+            }
+          ],
+          "property_bag": {
+            "#tts_dialog_body": "#disconnect_text"
+          }
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ 0, 30 ]
+        }
+      },
+      {
+        "footer_text": {
+          "type": "label",
+          "color": "$title_text_color",
+          "size": [ "100%", "default" ],
+          "text": "#title_text",
+          "bindings": [
+            {
+              "binding_name": "#title_text"
+            },
+            {
+              "binding_name": "#tts_dialog_body",
+              "binding_condition": "once"
+            }
+          ],
+          "property_bag": {
+            "#tts_dialog_body": "#title_text"
+          }
+        }
+      }
+    ]
+  },
+
+  "disconnect_screen@common.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_leave_screen",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_content": "disconnect.disconnect_screen_content",
+    "$button_layout": "@disconnect.button_panel",
+    "$screen_bg_content": "common.empty_panel"
+  },
+
+  "disconnect_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "player_list_back@disconnect.player_list_back": {}
+      }
+    ]
+  }
+}

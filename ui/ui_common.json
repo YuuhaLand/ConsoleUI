@@ -1,0 +1,29 @@
+{
+  "namespace": "common",
+  "button": {
+    "sound_name": "random.wood_click_ce"
+  },
+  "toggle": {
+    "variables": [
+      {
+        "requires": "$return_sound",
+        "$sound_name": "random.return_ce"
+      }
+    ],
+    "$return_sound|default": false,
+    "$sound_name|default": "random.wood_click_ce",
+    "sound_name": "$sound_name"
+  },
+  "close_button": {
+    "sound_name": "random.return_ce"
+  },
+  "back_button": {
+    "sound_name": "random.return_ce"
+  },
+  "inventory_selected_icon_button": {
+    "sound_name": "random.wood_click_ce"
+  },
+  "inventory_take_progress_icon_button": {
+    "sound_name": "random.wood_click_ce"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "namespace": "sign",
+
+  "edit_sign_message_text": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 20 ],
+    "controls":[
+      {
+        "sign_edit": {
+          "type": "label",
+          "font_size": "large",
+          "text": "sign.edit",
+          "shadow": true,
+          "size": [ "default", 20 ]
+        }
+      },
+      {
+        "colon": {
+          "type": "label",
+          "font_size": "large",
+          "text": ":",
+          "shadow": true,
+          "size": [ "default", 20 ]
+        }
+      }
+    ]
+  },
+
+  "sign_text_multiline": {
+    "offset": [ 0, -10 ]
+  },
+
+  "sign_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "edit_sign_message_text@sign.edit_sign_message_text": {
+          "offset": [ 0, -75 ]
+        }
+      },
+      {
+        "input_eating_panel": {
+          "type": "input_panel",
+          "layer": 2,
+          "size": [ "100%c", "100%c" ],
+          "focus_enabled": false,
+          "$virtual_keyboard_buffer_control": "text_edit",
+          "controls": [
+            { "text_edit@sign.sign_text_multiline": {} }
+          ]
+        }
+      },
+      {
+        "invisible_exit_background": {
+          "type": "input_panel",
+          "layer": 1,
+          "size": [ "100%", "100%" ],
+          "focus_enabled": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_name": "#close_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "quit_button@common_buttons.light_text_button": {
+          "$pressed_button_name": "button.menu_exit",
+          "$button_text": "gui.done",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1,
+          "size": [ 250, 20 ],
+          "offset": [ 0, 75 ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "sign_screen@common.base_screen": {
+    "$screen_content": "sign.sign_screen_content",
+    "$screen_bg_content": "sign.background",
+    "$close_on_player_hurt|default": false,
+    "close_on_player_hurt": false,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "background": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui/White",
+    "color": [ 0.0, 0.0, 0.0 ],
+    "alpha": 0.7
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$light_button_default_text_color": [ 1.0, 1.0, 1.0 ],
+  "$light_button_hover_text_color": [ 1.0, 1.0, 0.0 ],
+  "$light_button_pressed_text_color": [ 1.0, 1.0, 0.0 ],
+  "$light_button_locked_text_color": [ 0.627, 0.627, 0.627 ],
+
+  "$light_toggle_default_text_color": [ 1.0, 1.0, 1.0 ],
+  "$light_toggle_hover_text_color": [ 1.0, 1.0, 0.0 ],
+  "$light_toggle_checked_default_text_color": [ 1.0, 1.0, 0.0 ],
+  "$light_toggle_checked_hover_text_color": [ 1.0, 1.0, 0.0 ],
+  
+  "$light_border_default_color": [ 0.0, 0.0, 0.0 ],
+  "$light_border_hover_color": [ 0.0, 0.0, 0.0 ],
+  "$light_border_pressed_color": [ 0.0, 0.0, 0.0 ],
+  "$light_border_locked_color": [ 0.0, 0.0, 0.0 ],
+
+  "$light_border_toggle_default_color": [ 0.0, 0.0, 0.0 ],
+  "$light_border_toggle_hover_color": [ 0.0, 0.0, 0.0 ],
+  
+  "$dark_button_default_text_color": [ 1.0, 1.0, 1.0 ],
+  "$dark_button_hover_text_color": [ 1.0, 1.0, 0.0 ],
+  "$dark_button_pressed_text_color": [ 1.0, 1.0, 0.0 ],
+  "$dark_button_locked_text_color": [ 0.627, 0.627, 0.627 ],
+
+  "$dark_toggle_default_text_color": [ 1.0, 1.0, 1.0 ],
+  "$dark_toggle_hover_text_color": [ 1.0, 1.0, 0.0 ],
+  "$dark_toggle_checked_default_text_color": [ 1.0, 1.0, 0.0 ],
+  "$dark_toggle_checked_hover_text_color": [ 1.0, 1.0, 0.0 ],
+  
+  "$dark_border_default_color": [ 0.0, 0.0, 0.0 ],
+  "$dark_border_hover_color": [ 0.0, 0.0, 0.0 ],
+  "$dark_border_pressed_color": [ 0.0, 0.0, 0.0 ],
+  "$dark_border_locked_color": [ 0.0, 0.0, 0.0 ],
+
+  "$dark_border_toggle_default_color": [ 0.0, 0.0, 0.0 ],
+  "$dark_border_toggle_hover_color": [ 0.0, 0.0, 0.0 ]
+}

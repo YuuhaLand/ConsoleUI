@@ -1,0 +1,37 @@
+{
+  "namespace": "play",
+
+  "local_world_item_button": {
+    "variables": [
+      {
+        "requires": "($local_world_upload)",
+        "$pressed_button_name": "button.local_world_upload"
+      },
+      {
+        "requires": "(not $local_world_upload)",
+        "$pressed_button_name": "button.menu_local_world_item_edit"
+      }
+    ],
+    "$pressed_button_name": "button.menu_local_world_item_edit"
+  },
+
+  "local_world_item": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 1,
+    "size": [ "100%", 29 ],
+    "orientation": "horizontal",
+    "$local_world_edit_button_visible|default": false,
+    "controls": [
+      {
+        "header_button_panel@play.local_world_item_button": {
+          "layer": 1,
+          "size": [ "100%", "100% + 1px" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+menu.play=Play Game
+menu.settings=Help & Options
+menu.store=Minecraft Store
+
+progressScreen.loadingWorld=Initializing server
+progressScreen.savingLevel=Preparing to Save Level
+
+pauseScreen.secondaryClientLeave=Exit Game
+
+menu.howToPlay=How To Play
+
+options.multiplayergame=Online Game
+
+resourcePack.vanilla.name=Minecraft
+resourcePack.vanilla.description=The classic Minecraft textures, icons and user interface!
+hbui.CreateNewWorld.resourcePacks.globalMinecraftPackDescription=The classic Minecraft textures, icons and user interface!
+

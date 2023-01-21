@@ -1,0 +1,35 @@
+
+{
+  "namespace": "common_buttons",
+
+  "new_ui_binding_button_label": {
+    "shadow": true
+  },
+
+  "light_content_button": {
+    "$button_pressed_offset|default": [ 0, 0 ]
+  },
+
+  "light_text_button": {
+    "$button_pressed_offset|default": [ 0, 0 ]
+  },
+
+  "dark_content_button": {
+    "$button_pressed_offset|default": [ 0, 0 ]
+  },
+
+  "dark_text_button": {
+    "$button_pressed_offset|default": [ 0, 0 ]
+  },
+
+  "dark_button_assets@common.button": {
+    "$default_button_texture|default": "textures/ui/button_borderless_light",
+    "$hover_button_texture|default": "textures/ui/button_borderless_lighthover",
+    "$pressed_button_texture|default": "textures/ui/button_borderless_lightpressed",
+    "$locked_button_texture|default": "textures/ui/disabledButtonNoBorder",
+
+    "locked_control": "locked",
+
+    "$locked_alpha": 1
+  }
+}

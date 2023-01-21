@@ -1,0 +1,326 @@
+{
+  "namespace": "start",
+  
+  "main_buttons_panel": {
+    "type": "panel",
+    "size": [ 250, "100%c" ],
+    "controls": [
+      {
+        "stacked_rows": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "play_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.menu_play",
+                "$button_text": "menu.play",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 90,
+                "size": [ 250, 20 ]
+              }
+            },
+            {
+              "padding_01": { "type": "panel", "size": [ 0, 2 ] }
+            },
+            {
+              "achive_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.menu_achievements",
+                "$button_text": "menu.achievements",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 90,
+                "size": [ 250, 20 ]
+              }
+            },
+            {
+              "padding_02": { "type": "panel", "size": [ 0, 2 ] }
+            },
+            {
+              "settings_button_panel": {
+                "type": "panel",
+                "size": [ 250, 20 ],
+                "layer": 90,
+                "controls": [
+                  {
+                    "settings_button@pause.option": {
+                      "size": [ 250, 20 ],
+                      "$toggle_view_binding_name": "option_page",
+                      "$button_text": "menu.settings",
+                      "$toggle_group_forced_index": 100
+                    }
+                  },
+                  {
+                    "count@start.notification_button_text_panel": {
+                      "offset": [ -2.5, 2 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#realms_notification_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding_03": { "type": "panel", "size": [ 0, 2 ] }
+            },
+            {
+              "store_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.menu_store",
+                "$button_text": "menu.store",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 90,
+                "size": [ 250, 20 ]
+              }
+            },
+            {
+              "padding_04": { "type": "panel", "size": [ 0, 2 ] }
+            },
+            {
+              "quit_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.menu_exit",
+                "$button_text": "pauseScreen.secondaryClientLeave",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 90,
+                "size": [ 250, 20 ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "option_page",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  
+  "options_button_panel": {
+    "type": "panel",
+    "size": [ 250, "100%c" ],
+    "controls": [
+      {
+        "stacked_rows": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "htp_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.menu_skins",
+                "$button_text": "options.skin.change",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 90,
+                "size": [ 250, 20 ]
+              }
+            },
+            {
+              "padding_01": { "type": "panel", "size": [ 0, 2 ] }
+            },
+            {
+              "settings_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.menu_settings",
+                "$button_text": "hbui.CreateNewWorld.multiplayer.settingsTitle",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 90,
+                "size": [ 250, 20 ]
+              }
+            },
+            {
+              "padding_02": { "type": "panel", "size": [ 0, 2 ] }
+            },
+            {
+              "skin_button@common_buttons.light_text_button": {
+                "$pressed_button_name": "button.menu_buy_game",
+                "$button_text": "manifestvalidation.title",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "layer": 90,
+                "size": [ 250, 20 ],
+
+                "ignored": true
+              }
+            },
+            {
+              "padding_03": { "type": "panel", "size": [ 0, 2 ],    "ignored": true }
+            },
+            {
+              "realms_button_panel": {
+                "type": "panel",
+                "size": [ 250, 20 ],
+                "layer": 90,
+                "controls": [
+                  {
+                    "store_button@common_buttons.light_text_button": {
+                      "$pressed_button_name": "button.menu_invite_notification",
+                      "$button_text": "realmsInvitationScreen.shareTitle",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "size": [ 250, 20 ]
+                    }
+                  },
+                  {
+                    "count@start.notification_button_text_panel": {
+                      "offset": [ -2.5, 2 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#realms_notification_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding_04": { "type": "panel", "size": [ 0, 2 ] }
+            },
+            {
+              "back_button@pause.option": {
+                "size": [ 250, 20 ],
+                "$checked_control": "common_toggles.toggle_unchecked",
+                "$checked_hover_control": "common_toggles.toggle_unchecked_hover",
+                "layer": 90,
+            
+                "$button_text": "gui.back",
+                "$toggle_default_state": true,
+                "$toggle_group_forced_index": 0,
+
+                "$template_toggle": "cui.close_toggle"
+              }
+            },
+            {
+              "padding_05": { "type": "panel", "size": [ 0, 22 ] }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "option_page",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "profile_button": {
+    "ignored": true
+  },
+
+  "main_buttons_stack_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+    "orientation": "vertical",
+    "$title_offset_padding|default": [ "100%", "10%" ],
+    "variables": [
+      {
+        "requires": "($pocket_screen)",
+        "$title_offset_padding": [ "100%", "5%" ]
+      }
+    ],
+    "controls": [
+      {
+        "title_offset_padding": {
+          "type": "panel",
+          "size": "$title_offset_padding"
+        }
+      },
+      {
+        "title_panel_content@common_art.start_title_panel_content": {}
+      },
+      {
+        "padding_fill_1": {
+          "type": "panel",
+          "size": [ "100%", "fill" ]
+        }
+      },
+      {
+        "main_buttons_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "main_buttons_panel@start.main_buttons_panel": {}
+            },
+            {
+              "options_button_panel@start.options_button_panel": {}
+            }
+          ]
+        }
+      },
+      {
+        "padding_fill_2": {
+          "type": "panel",
+          "size": [ "100%", "fill" ],
+          "controls": [
+            {
+              "gamepad_helpers@start.gamepad_helpers": {}
+            },
+            {
+              "keyboard_helpers@start.keyboard_helper_vr_swap": {}
+            }
+          ]
+        }
+      },
+      {
+        "padding_3": {
+          "type": "panel",
+          "size": [ "100%", 10 ] // size of text at the bottom of the screen
+        }
+      }
+    ]
+  },
+
+  "start_screen@common.base_screen": {
+    "$screen_content": "start.start_screen_content"
+  },
+
+  "start_screen_content": {
+    "type": "panel",
+    "$achievements_ignored|default": true,
+    "$feedback_ignored|default": true,
+    "controls": [
+      {
+        "main_buttons_and_title_panel@start.main_buttons_stack_panel": {}
+      },
+      {
+        "upper_online_buttons_panel@start.upper_online_buttons_panel": {}
+      },
+      {
+        "lower_online_buttons_panel@start.lower_online_buttons_panel": {}
+      },
+      {
+        "skin_panel@start.skin_panel": { "layer": 1 }
+      },
+      {
+        "text_panel@start.text_panel": {}
+      },
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "cloud_upload_prompt": "@start.cloud_upload_prompt"
+          }
+        }
+      }
+    ]
+  }
+}

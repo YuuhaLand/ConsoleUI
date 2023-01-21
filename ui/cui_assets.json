@@ -1,0 +1,95 @@
+{
+  "namespace": "cui",
+
+  "close_toggle@common_toggles.light_template_toggle": {
+    "$button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.controller_back",
+        "mapping_type": "focused",
+        "ignored": "(not $allow_controller_back_button_mapping)"
+      },
+      {
+        "ignored": "(not $enable_directional_toggling)",
+        "from_button_id": "button.menu_left",
+        "to_button_id": "$toggle_off_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "gamepad_and_not_gaze"
+      },
+      {
+        "ignored": "(not $enable_directional_toggling)",
+        "from_button_id": "button.menu_right",
+        "to_button_id": "$toggle_on_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "gamepad_and_not_gaze"
+      },
+      {
+        "ignored": "(not $enable_hover_event_mapping)",
+        "to_button_id": "$toggle_hover_event_mapping",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "close_dlga_esc@common.toggle": {
+    "sound_volume": 0,
+    "$radio_toggle_group": true,
+    "$toggle_focus_enabled": false,
+    "$toggle_binding_type": "global",
+    "$toggle_binding_condition": "once",
+
+    "$unchecked_control": "common.empty_panel",
+    "$checked_control": "common.empty_panel",
+    "$unchecked_hover_control": "common.empty_panel",
+    "$checked_hover_control": "common.empty_panel",
+    "$unchecked_locked_control": "common.empty_panel",
+    "$checked_locked_control": "common.empty_panel",
+    "$unchecked_locked_hover_control": "common.empty_panel",
+    "$checked_locked_hover_control": "common.empty_panel",
+
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+
+
+  "dlga@common_toggles.light_text_toggle": {
+    "$radio_toggle_group": true,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "once",
+    
+    "$checked_control": "common_toggles.toggle_unchecked",
+    "$checked_hover_control": "common_toggles.toggle_unchecked_hover"
+  },
+
+  "dlga_c@common_toggles.light_content_toggle": {
+    "$radio_toggle_group": true,
+    "$toggle_focus_enabled": true,
+    "$binding_type": "global",
+    "$binding_condition": "once",
+    
+    "$checked_control": "common_toggles.toggle_unchecked",
+    "$checked_hover_control": "common_toggles.toggle_unchecked_hover"
+  }
+}
