@@ -33,5 +33,11 @@
   "$dark_border_locked_color": [ 0.0, 0.0, 0.0 ],
 
   "$dark_border_toggle_default_color": [ 0.0, 0.0, 0.0 ],
-  "$dark_border_toggle_hover_color": [ 0.0, 0.0, 0.0 ]
+  "$dark_border_toggle_hover_color": [ 0.0, 0.0, 0.0 ],
+
+  "$boss_name_text_color": [ 1.0, 1.0, 1.0 ],
+
+
+  "$console_ui_enabled": true,
+  "$gote_supporter_enabled|default": false
 }

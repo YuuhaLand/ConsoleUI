@@ -1,6 +1,9 @@
 menu.play=プレイする
 menu.settings=遊び方 & オプション
 menu.store=Minecraft ストア
+selectWorld.cheats=ホスト特権
+
+deathScreen.message=ゲームオーバー!
 
 progressScreen.loadingWorld=サーバーを初期化中
 progressScreen.savingLevel=セーブレベル
@@ -12,3 +15,69 @@ resourcePack.vanilla.description=Minecraft 正統派のテクスチャ、 アイ
 hbui.CreateNewWorld.resourcePacks.globalMinecraftPackDescription=Minecraft 正統派のテクスチャ、 アイコン、ユーザー インターフェイス!
 
 pauseScreen.secondaryClientLeave=ゲームを終了
+
+
+cui.cl.v110.1=新たに「クリエイティブインベントリ画面」と、「ワールド設定画面」と、「死亡画面」をサポートしました。
+cui.cl.v110.2=「切断画面」に背景を追加しました。
+cui.cl.v110.3=「パック情報画面」を追加しました。
+cui.cl.v110.4=HUDのボスバーのラベルテキストが紫色または赤色で表示されるようになりました。
+cui.cl.v110.5=HUDのチャットが左下に表示されるようになりました。
+cui.cl.v110.6=よりコンソールのUIに近づけるため、ボタンのサイズや位置を微調整しました。
+cui.cl.v110.7=スライダーをコンソール風にしました。
+cui.cl.v110.8=設定画面の背景色をコンソールと同じような色に変更しました。
+cui.cl.v110.9=インベントリ画面などの黒バックを削除しました。
+cui.cl.v110.10=Gote-Supporterと一緒に適用されていないと、ポーズ画面でコンテンツログエラーが出力される問題を修正しました。
+cui.cl.v110.11=モバイルでワールドロード画面から戻ることができない問題を修正しました。
+cui.cl.v110.12=チェックボックスのラベルが上にズレていた問題を修正しました。
+cui.cl.v110.13=スタート画面にバニラの「Realm招待」ボタンが表示されていた問題を修正しました。
+cui.cl.v110.14=スタート画面の「サインイン」ボタンが画面の端に表示されていた問題を修正しました。
+cui.cl.v110.15=名称を「ConsoleUI」から「Legacy GameConsoleUI」に変更しました。
+
+cui.cl.v100.1=初リリース。
+
+cui.about.back=<- もどる
+##>
+
+cui.about.about_pack=このパックについて
+cui.about.about_pack.title=Legacy GameConsole UI: このパックについて
+cui.about.about_pack.1=このパックは、従来のコンソール版Minecraft(Xbox 360・One、PlayStation3・4・Vita、WiiU、Nintendo Switch)風のUIに変更します!
+cui.about.about_pack.2=懐かしいコンソール版を思い出そう!
+cui.about.about_pack.3=このパックはMCPEDLでアップロードされています!
+cui.about.about_pack.4=§amcpedl.com/console-ui/
+cui.about.about_pack.5=なにか不具合などを発見した際はDiscordサーバーにて教えてください!
+cui.about.about_pack.6=§adiscord.gg/ZcCnXYEFc2
+
+cui.about.about_author=つくったひと
+cui.about.about_author.title=Legacy GameConsole UI: つくったひと
+cui.about.about_author.1=Yuka0745 / YukaYama0311
+cui.about.about_author.2=ごて鯖を運営したりアドオン作ったりしている者。
+cui.about.about_author.3=いつもダラダラマイクラしかやってない女です。
+cui.about.about_author.4=JSON UIは趣味で好きなように作ってます。
+cui.about.about_author.5=プログラミングはヘタクソ。
+cui.about.about_author.6=新しいことを覚えるのが苦手。
+cui.about.about_author.7=マイクラ歴は8年くらい。
+cui.about.about_author.8=日本一のRealmサーバー「彩」の運営も努めてます。
+cui.about.about_author.9=Realmには8000人以上のメンバーがいるとても賑やかなサーバーです!
+cui.about.about_author.10=ぜひ来てみてね。
+cui.about.about_author.11=ごて鯖 Discord
+cui.about.about_author.12=§adiscord.gg/tzU7R5NMnu
+cui.about.about_author.13=ごて鯖 Realm
+cui.about.about_author.14=§aごて鯖のDiscordで確認してね。
+cui.about.about_author.15=「彩」 Discord
+cui.about.about_author.16=§adiscord.gg/WqsPrrxuU6
+
+cui.about.changelogs=アップデート情報
+cui.about.changelogs.title=Legacy GameConsole UI: アップデート情報
+cui.about.changelogs.1=ここでは、Legacy GameConsoleUIの更新情報を見ることができます。
+
+cui.about.licence=ライセンス
+cui.about.licence.title=Legacy GameConsole UI: ライセンス
+
+cui.about.caution=諸注意
+cui.about.caution.title=Legacy GameConsole UI: 諸注意
+cui.about.caution.1=このパックは日本製です。英語への翻訳はDeepLを使用しています。
+cui.about.caution.2=このパックは、他のUI変更リソースパックや、UIのテクスチャを変更するテクスチャと一緒に適用すると不具合が発生する可能性があります。
+cui.about.caution.3=このパックのコードなどは、自由にコピー・改変・他のパックへの組み込み出来ます。
+cui.about.caution.4=ただし、説明欄など任意の場所にこのパックからコピーしたことをしっかり明記してください。
+cui.about.caution.5=なお、ワールドやサーバーのリソースパックに適用することも出来ますが、おすすめできません。
+cui.about.caution.6=ワールドに入った人の混乱や誤解などを招く可能性があるので、適用しないことをおすすめします。

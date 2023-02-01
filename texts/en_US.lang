@@ -15,3 +15,70 @@ resourcePack.vanilla.name=Minecraft
 resourcePack.vanilla.description=The classic Minecraft textures, icons and user interface!
 hbui.CreateNewWorld.resourcePacks.globalMinecraftPackDescription=The classic Minecraft textures, icons and user interface!
 
+
+cui.cl.v110.1=Newly supported "Creative Inventory Screen", "World Settings Screen" and "Death Screen".
+cui.cl.v110.2=Added a background to the "Disconnection Screen".
+cui.cl.v110.3=Added "Pack Information Screen".
+cui.cl.v110.4=HUD boss bar label text is now purple or red.
+cui.cl.v110.5=Chat in the HUD is now displayed in the lower left corner.
+cui.cl.v110.6=Button sizes and positions have been tweaked to more closely resemble the console UI.
+cui.cl.v110.7=Made the slider more console-like.
+cui.cl.v110.8=Changed the background color of the settings screen to be similar to the console.
+cui.cl.v110.9=Removed black background on inventory and other screens.
+cui.cl.v110.10=Fixed a content log error on the pause screen if not applied with Gote-Supporter.
+cui.cl.v110.11=Fixed a problem that prevented returning from the world load screen on mobile.
+cui.cl.v110.12=Fixed a problem with checkbox labels being shifted up.
+cui.cl.v110.13=Fixed a problem with the vanilla "Realm Invite" button on the start screen.
+cui.cl.v110.14=Fixed a problem in which the "Sign In" button on the Start screen was displayed at the edge of the screen.
+cui.cl.v110.15=Changed the name from "ConsoleUI" to "Legacy GameConsoleUI".
+
+cui.cl.v100.1=First release.
+
+cui.about.back=<- Back
+##>
+
+cui.about.about_pack=About this pack
+cui.about.about_pack.title=Legacy GameConsole UI: About this pack
+cui.about.about_pack.1=This pack changes the UI to a traditional console Minecraft (Xbox 360/One, PlayStation3/4/Vita, WiiU, Nintendo Switch) style!
+cui.about.about_pack.2 =Remember the old console versions!
+cui.about.about_pack.3=This pack is uploaded by MCPEDL!
+cui.about.about_pack.4=§amcpedl.com/console-ui/
+cui.about.about_pack.5=If you find any problems, please let us know on the Discord server!
+cui.about.about_pack.6=§adiscord.gg/ZcCnXYEFc2
+
+cui.about.about_author=Creator info
+cui.about.about_author.title=Legacy GameConsole UI: Creator info
+cui.about.about_author.1=Yuka0745 / YukaYama0311
+cui.about.about_author.2=A person who is managing Gote-Server and making add-ons.
+cui.about.about_author.3=I'm a woman who always only plays lazy mike.
+cui.about.about_author.4=I make JSON UI as I like as a hobby.
+cui.about.about_author.5=I'm terrible at programming.
+cui.about.about_author.6=I'm not good at learning new things.
+cui.about.about_author.7=I have about 8 years of experience in Minecraft.
+cui.about.about_author.8=I'm also manage "Cai Server", the best Realm server in Japan.
+cui.about.about_author.9=Realm is a very busy server with over 8000 members!
+cui.about.about_author.10=Please come and visit us!
+cui.about.about_author.11=Gote-Server Discord (Japanese)
+cui.about.about_author.12=§adiscord.gg/tzU7R5NMnu
+cui.about.about_author.13=Gote-Server Realm
+cui.about.about_author.14=§a Check the Discord for Gote-Server.
+cui.about.about_author.15=Cai Server Discord (Japanese)
+cui.about.about_author.16=§adiscord.gg/WqsPrrxuU6
+
+cui.about.changelogs=Changelogs
+cui.about.changelogs.title=Legacy GameConsole UI: Changelogs
+cui.about.changelogs.1=Here you can see the Changelogs for the Legacy GameConsoleUI.
+
+cui.about.licence=License
+cui.about.licence.title=Legacy GameConsole UI: License
+
+cui.about.caution=Caution
+cui.about.caution.title=Legacy GameConsole UI: Caution
+cui.about.caution.1=This pack is made in Japan. Translation into English is available at DeepL.
+cui.about.caution.2=This pack may cause problems if applied together with other UI modification resource packs or textures that change the texture of the UI.
+cui.about.caution.3=The code in this pack may be freely copied, modified, and incorporated into other packs.
+cui.about.caution.4=You are free to copy, modify, and incorporate code from this pack into other packs, provided that you clearly state that you copied it from this pack in the description or in some other arbitrary place.
+cui.about.caution.5=You can also apply it to world and server resource packs, but this is not recommended.
+cui.about.caution.6=It is recommended that you do not apply this pack, as it may cause confusion or misunderstanding for people entering the world.
+
+##Translated with www.DeepL.com/Translator (free version)

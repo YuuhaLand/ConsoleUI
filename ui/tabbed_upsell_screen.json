@@ -1,0 +1,661 @@
+{
+	"namespace": "tabbed_upsell",
+
+  "page01@cui.dlga": {
+    "$toggle_name": "about_pack"
+  },
+  "page02@cui.dlga": {
+    "$toggle_name": "about_author"
+  },
+  "page03@cui.dlga": {
+    "$toggle_name": "changelogs"
+  },
+  "page04@cui.dlga": {
+    "$toggle_name": "licence"
+  },
+  "page05@cui.dlga": {
+    "$toggle_name": "caution"
+  },
+
+  "back_button_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", 19 ],
+    "orientation": "horizontal",
+    "$toggle_id|default": "licence",
+    "$title_name|default": "title",
+    "controls": [
+      {
+        "back_button@tabbed_upsell.page01": {
+          "size": [ 70, 16 ],
+          "$checked_control": "common_toggles.toggle_unchecked",
+          "$checked_hover_control": "common_toggles.toggle_unchecked_hover",
+          "$radio_toggle_group": true,
+          "$toggle_group_forced_index": 0,
+          "$button_text": "cui.about.back",
+          "$toggle_name": "$toggle_id",
+          "$template_toggle": "cui.close_toggle"
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ 3, 0 ]
+        }
+      },
+      {
+        "title_label_panel": {
+          "type": "panel",
+          "size": [ "fill", 16 ],
+          "controls": [
+            {
+              "title_label": {
+                "type": "label",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "color": "$2_color_format",
+                "size": [ "default", 10 ],
+                "text": "$title_name",
+                "shadow": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "version_toggle_button_content2": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "labels": {
+          "type": "stack_panel",
+          "size": [ "100%", 10 ],
+          "offset": [ 2, 0 ],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "consoleui": {
+                "type": "label",
+                "text": "Legacy GameConsole UI ",
+                "color": "$text_color",
+                "shadow": true
+              }
+            },
+            {
+              "versions": {
+                "type": "label",
+                "text": "$version",
+                "color": "$text_color",
+                "shadow": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "dropdown_chevron": {
+          "type": "image",
+          "texture": "textures/ui/dropdown_chevron",
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -5, 0 ],
+          "size": [ 11, 11 ]
+        }
+      }
+    ]
+  },
+
+  "version_section2": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "$version|default": "v1.0.0",
+    "$details_controls|default": [],
+    "controls": [
+      {
+        "toggle_button@common_toggles.light_content_toggle": {
+          "size": [ "100%", 20 ],
+          "$button_content": "tabbed_upsell.version_toggle_button_content2",
+          "$toggle_name": "$version",
+          "$toggle_view_binding_name": "$version"
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 0, 3 ]
+        }
+      },
+      {
+        "details_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": "$details_controls",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "$version",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "padding_2": {
+          "type": "panel",
+          "size": [ 0, 3 ]
+        }
+      }
+    ]
+  },
+  
+  "text": {
+    "type": "label",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [ "100%", "default" ],
+    "shadow": true
+  },
+
+	"index_panel": {
+		"type": "stack_panel",
+		"size": [ "100% - 4px", "100%c" ],
+    "offset": [ 2, 0 ],
+		"controls": [
+      {
+        "index_button_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "about_pack_button@tabbed_upsell.page01": {
+                "size": [ "100%", 16 ],
+                "$radio_toggle_group": true,
+                "$toggle_group_forced_index": 100,
+                "$button_text": "cui.about.about_pack",
+                "$toggle_name": "about_pack",
+                "$toggle_view_binding_name": "about_pack"
+              }
+            },
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "about_author_button@tabbed_upsell.page02": {
+                "size": [ "100%", 16 ],
+                "$radio_toggle_group": true,
+                "$toggle_group_forced_index": 100,
+                "$button_text": "cui.about.about_author",
+                "$toggle_name": "about_author",
+                "$toggle_view_binding_name": "about_author"
+              }
+            },
+            {
+              "padding_2": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "changelogs_button@tabbed_upsell.page03": {
+                "size": [ "100%", 16 ],
+                "$radio_toggle_group": true,
+                "$toggle_group_forced_index": 100,
+                "$button_text": "cui.about.changelogs",
+                "$toggle_name": "changelogs",
+                "$toggle_view_binding_name": "changelogs"
+              }
+            },
+            {
+              "padding_3": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "licence_button@tabbed_upsell.page04": {
+                "size": [ "100%", 16 ],
+                "$radio_toggle_group": true,
+                "$toggle_group_forced_index": 100,
+                "$button_text": "cui.about.licence",
+                "$toggle_name": "licence",
+                "$toggle_view_binding_name": "licence"
+              }
+            },
+            {
+              "padding_4": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "caution_button@tabbed_upsell.page05": {
+                "size": [ "100%", 16 ],
+                "$radio_toggle_group": true,
+                "$toggle_group_forced_index": 100,
+                "$button_text": "cui.about.caution",
+                "$toggle_name": "caution",
+                "$toggle_view_binding_name": "caution"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "footer_padding": {
+          "type": "panel",
+          "size": [ 0, 10 ]
+        }
+      }
+		]
+	},
+
+	"texts_panel": {
+		"type": "stack_panel",
+		"size": [ "100% - 4px", "100%c" ],
+    "offset": [ 2, 0 ],
+		"controls": [
+      {
+        "about_pack_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "back_button_panel@tabbed_upsell.back_button_panel": {
+                "$toggle_id": "about_pack",
+                "$title_name": "cui.about.about_pack.title"
+              }
+            },
+            { "howtoplay_0@cui.paragraph": {"$text": "cui.about.about_pack.1"}},
+            { "howtoplay_1@cui.paragraph": {"$text": "cui.about.about_pack.2"}},
+            { "howtoplay_2@cui.paragraph": {"$text": ""}},
+            { "howtoplay_3@cui.paragraph": {"$text": "cui.about.about_pack.3"}},
+            { "howtoplay_4@cui.paragraph": {"$text": "cui.about.about_pack.4"}},
+            { "howtoplay_5@cui.paragraph": {"$text": ""}},
+            { "howtoplay_6@cui.paragraph": {"$text": "cui.about.about_pack.5"}},
+            { "howtoplay_7@cui.paragraph": {"$text": "cui.about.about_pack.6"}}
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "about_pack",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "about_author_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "back_button_panel@tabbed_upsell.back_button_panel": {
+                "$toggle_id": "about_author",
+                "$title_name": "cui.about.about_author.title"
+              }
+            },
+            { "howtoplay_0@cui.paragraph": {"$text": "cui.about.about_author.1", "font_type": "MinecraftTen"}},
+            { "howtoplay_1@cui.paragraph": {"$text": "cui.about.about_author.2"}},
+            { "howtoplay_2@cui.paragraph": {"$text": "cui.about.about_author.3"}},
+            { "howtoplay_3@cui.paragraph": {"$text": "cui.about.about_author.4"}},
+            { "howtoplay_4@cui.paragraph": {"$text": "cui.about.about_author.5"}},
+            { "howtoplay_5@cui.paragraph": {"$text": "cui.about.about_author.6"}},
+            { "howtoplay_6@cui.paragraph": {"$text": "cui.about.about_author.7"}},
+            { "howtoplay_7@cui.paragraph": {"$text": ""}},
+            { "howtoplay_8@cui.paragraph": {"$text": "cui.about.about_author.8"}},
+            { "howtoplay_9@cui.paragraph": {"$text": "cui.about.about_author.9"}},
+            { "howtoplay_10@cui.paragraph": {"$text": "cui.about.about_author.10"}},
+            { "howtoplay_11@cui.paragraph": {"$text": ""}},
+            { "howtoplay_12@cui.paragraph": {"$text": "cui.about.about_author.11"}},
+            { "howtoplay_13@cui.paragraph": {"$text": "cui.about.about_author.12"}},
+            { "howtoplay_14@cui.paragraph": {"$text": ""}},
+            { "howtoplay_15@cui.paragraph": {"$text": "cui.about.about_author.13"}},
+            { "howtoplay_16@cui.paragraph": {"$text": "cui.about.about_author.14"}},
+            { "howtoplay_17@cui.paragraph": {"$text": ""}},
+            { "howtoplay_18@cui.paragraph": {"$text": "cui.about.about_author.15"}},
+            { "howtoplay_19@cui.paragraph": {"$text": "cui.about.about_author.16"}}
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "about_author",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "changelogs_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "back_button_panel@tabbed_upsell.back_button_panel": {
+                "$toggle_id": "changelogs",
+                "$title_name": "cui.about.changelogs.title"
+              }
+            },
+            { "howtoplay_0@cui.paragraph": {"$text": "cui.about.changelogs.1"}},
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ 0, 3 ]
+              }
+            },
+            {
+              "update_description@change_logs.consoleui_changelogs": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "changelogs",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "licence_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "back_button_panel@tabbed_upsell.back_button_panel": {
+                "$toggle_id": "licence",
+                "$title_name": "cui.about.licence.title"
+              }
+            },
+            { "howtoplay_0@cui.paragraph": {"$text": "MIT License"}},
+            { "howtoplay_1@cui.paragraph": {"$text": ""}},
+            { "howtoplay_2@cui.paragraph": {"$text": "Copyright (c) 2023 Yuka0745"}},
+            { "howtoplay_3@cui.paragraph": {"$text": ""}},
+            { "howtoplay_4@cui.paragraph": {"$text": "Permission is hereby granted, free of charge, to any person obtaining a copy"}},
+            { "howtoplay_5@cui.paragraph": {"$text": "of this software and associated documentation files (the \"Software\"), to deal"}},
+            { "howtoplay_6@cui.paragraph": {"$text": "in the Software without restriction, including without limitation the rights"}},
+            { "howtoplay_7@cui.paragraph": {"$text": "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell"}},
+            { "howtoplay_8@cui.paragraph": {"$text": "copies of the Software, and to permit persons to whom the Software is"}},
+            { "howtoplay_9@cui.paragraph": {"$text": "furnished to do so, subject to the following conditions:"}},
+            { "howtoplay_10@cui.paragraph": {"$text": ""}},
+            { "howtoplay_11@cui.paragraph": {"$text": "The above copyright notice and this permission notice shall be included in all"}},
+            { "howtoplay_12@cui.paragraph": {"$text": "copies or substantial portions of the Software."}},
+            { "howtoplay_13@cui.paragraph": {"$text": ""}},
+            { "howtoplay_14@cui.paragraph": {"$text": "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR"}},
+            { "howtoplay_15@cui.paragraph": {"$text": "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,"}},
+            { "howtoplay_16@cui.paragraph": {"$text": "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE"}},
+            { "howtoplay_17@cui.paragraph": {"$text": "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER"}},
+            { "howtoplay_18@cui.paragraph": {"$text": "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,"}},
+            { "howtoplay_19@cui.paragraph": {"$text": "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE"}},
+            { "howtoplay_20@cui.paragraph": {"$text": "SOFTWARE."}}
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "licence",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "caution_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "back_button_panel@tabbed_upsell.back_button_panel": {
+                "$toggle_id": "caution",
+                "$title_name": "cui.about.caution.title"
+              }
+            },
+            { "howtoplay_0@cui.paragraph": {"$text": "cui.about.caution.1"}},
+            { "howtoplay_1@cui.paragraph": {"$text": "cui.about.caution.2"}},
+            { "howtoplay_2@cui.paragraph": {"$text": ""}},
+            { "howtoplay_3@cui.paragraph": {"$text": "cui.about.caution.3"}},
+            { "howtoplay_4@cui.paragraph": {"$text": "cui.about.caution.4"}},
+            { "howtoplay_5@cui.paragraph": {"$text": "cui.about.caution.5"}},
+            { "howtoplay_6@cui.paragraph": {"$text": "cui.about.caution.6"}}
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "caution",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "footer_padding": {
+          "type": "panel",
+          "size": [ 0, 10 ]
+        }
+      }
+		]
+	},
+
+  "cui_info_screen": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "title_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "$title_offset_padding|default": [ "100%", "10%" ],
+          "$splash_text_visible": false,
+          "variables": [
+            {
+              "requires": "($pocket_screen)",
+              "$title_offset_padding": [ "100%", "5%" ]
+            }
+          ],
+          "controls": [
+            {
+              "title_offset_padding": {
+                "type": "panel",
+                "size": "$title_offset_padding"
+              }
+            },
+            {
+              "title_panel_content@common_art.start_title_panel_content": {}
+            }
+          ]
+        }
+      },
+      {
+        "index_screen": {
+          "type": "image",
+          "texture": "textures/ui/dialog_background_opaque",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ 200, 120 ],
+          "offset": [ 0, "-10%" ],
+          "controls": [
+            {
+              "title_label": {
+                "type": "label",
+                "size": [ "100%", 10 ],
+                "offset": [ 0, 4 ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_text_color",
+                "text": "Legacy GameConsole UI",
+                "text_alignment": "center"
+              }
+            },
+            {
+              "scroll@common.scrolling_panel": {
+                "size": [ "100% - 8px", "100% - 20px" ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "$show_background": false,
+                "$scrolling_content": "tabbed_upsell.index_panel"
+              }
+            },
+            {
+              "inventory_touch_close": {
+                "type": "image",
+                "size": [ 23, 23 ],
+                "offset": [ 25, -25 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "texture": "textures/ui/White",
+                "alpha": 0.8,
+                "visible": "$touch",
+                "$close_button_offset": [ 0, 0 ],
+                "controls": [
+                  {
+                    "close_button@common.close_button": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "bindings": [
+                        {
+                          "binding_name": "#tts_enabled",
+                          "binding_name_override": "#focus_enabled"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "about_pack",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#about_pack"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "about_author",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#about_author"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "changelogs",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#changelogs"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "licence",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#licence"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "caution",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#caution"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#about_pack or #about_author or #changelogs or #licence or #caution))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "description_screen": {
+          "type": "image",
+          "texture": "textures/ui/purpleBorder",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size":[ "70%", "55%" ],
+          "offset": [ 0, "-5%" ],
+          "controls": [
+            {
+              "scroll@common.scrolling_panel": {
+                "size": [ "100% - 8px", "100% - 8px" ],
+                "$show_background": false,
+                "$scrolling_content": "tabbed_upsell.texts_panel"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "about_pack",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#about_pack"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "about_author",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#about_author"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "changelogs",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#changelogs"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "licence",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#licence"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "caution",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#caution"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#about_pack or #about_author or #changelogs or #licence or #caution)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+
+  "tabbed_upsell_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_offset",
+      "@common.screen_exit_animation_pop_offset",
+      "@common.screen_entrance_animation_push_offset",
+      "@common.screen_entrance_animation_pop_offset",
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    "$background_animations": [
+      "@common.screen_exit_animation_push_alpha",
+      "@common.screen_exit_animation_pop_alpha",
+      "@common.screen_entrance_animation_push_alpha",
+      "@common.screen_entrance_animation_pop_alpha"
+    ],
+    "force_render_below": false,
+    "$screen_content": "tabbed_upsell.cui_info_screen"
+  }
+}

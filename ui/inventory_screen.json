@@ -1,0 +1,521 @@
+{
+  "namespace": "crafting",
+
+  "creative_planks@crafting.icon_image": {
+    "texture": "textures/ui/cui/creative_planks"
+  },
+
+  "creative_ken@crafting.icon_image": {
+    "texture": "textures/ui/cui/creative_ken"
+  },
+
+  "creative_lava_bucket@crafting.icon_image": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "property_bag": {
+      "#item_id_aux": 21299210 
+    }
+  },
+
+  "creative_glass_block@crafting.icon_image": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "property_bag": {
+      "#item_id_aux": 131072 
+    }
+  },
+
+
+  "recipe_inventory_screen_content/content_stack_panel": {
+    "bindings": [
+      {
+        "binding_name": "(not #is_creative_layout)",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "tab_navigation_panel_layout_console": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", 27 ],
+
+    "$is_search_right_most_tab|default": true,
+
+    "controls": [
+      {
+        "navigation_tabs": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "content": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%c", "100% + 4px" ],
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "controls": [
+                  {
+                    "construction_tab@crafting.construction_tab": {
+                      "$tab_icon": "crafting.creative_planks",
+                      "size": [ 30, "100%" ]
+                    }
+                  },
+                  {
+                    "equipment_tab@crafting.equipment_tab": {
+                      "$tab_icon": "crafting.creative_ken",
+                      "size": [ 30, "100%" ]
+                    }
+                  },
+                  {
+                    "items_tab@crafting.items_tab": {
+                      "$tab_icon": "crafting.creative_lava_bucket",
+                      "size": [ 30, "100%" ]
+                    }
+                  },
+                  {
+                    "nature_tab@crafting.nature_tab": {
+                      "$tab_icon": "crafting.creative_glass_block",
+                      "size": [ 30, "100%" ]
+                    }
+                  },
+                  {
+                    "search_tab_holder": {
+                      "type": "panel",
+                      "size": [ 30, "100%" ],
+                      "controls": [
+                        {
+                          "search_tab_end_creative@crafting.search_tab": {
+                            "$focus_override_right": "creative_layout_toggle",
+
+                            "bindings": [
+                              {
+                                "binding_type": "global",
+                                "binding_name": "#is_creative_and_recipe_book_layout",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "search_tab_creative@crafting.search_tab": {
+                            "$is_right_most_tab": false,
+                            "$focus_override_right": "creative_layout_toggle",
+
+                            "bindings": [
+                              {
+                                "binding_type": "global",
+                                "binding_name": "#is_creative_and_creative_layout",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "search_tab_survival@crafting.search_tab": {
+                            "$focus_override_right": "recipe_book_layout_toggle",
+
+                            "bindings": [
+                              {
+                                "binding_type": "global",
+                                "binding_name": "(not #is_creative_mode)",
+                                "binding_name_override": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "open_search_tab@game_tip.open_search_tab_factory": {
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "content_right": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%c", "100% + 4px" ],
+                "anchor_to": "top_right",
+                "anchor_from": "top_right",
+                "controls": [
+                  {
+                    "is_survival_layout@crafting.top_tab": {
+                      "size": [ 30, "100%" ],
+                      "$toggle_name": "layout_toggle",
+                      "$tab_icon": "crafting.inventory_icon",
+                      "$toggle_group_forced_index": "$survival_layout_index",
+                  
+                      "$toggle_binding_type": "global",
+                      "$toggle_state_binding_name": "#is_survival_layout"
+                    }
+                  },
+                  {
+                    "is_recipe_book_layout@crafting.top_tab": {
+                      "size": [ 30, "100%" ],
+                      "$toggle_name": "layout_toggle",
+                      "$tab_icon": "crafting.recipe_book_icon",
+                      "$toggle_group_forced_index": "$recipe_book_layout_index",
+                  
+                      "$toggle_binding_type": "global",
+                      "$toggle_state_binding_name": "#is_recipe_book_layout"
+                    }
+                  },
+                  {
+                    "is_creative_layout@crafting.top_tab": {
+                      "size": [ 30, "100%" ],
+                      "$is_right_most_tab": true,
+                      "$toggle_name": "layout_toggle",
+                      "$tab_icon": "crafting.creative_icon",
+                      "$toggle_group_forced_index": "$creative_layout_index",
+                  
+                      "$toggle_binding_type": "global",
+                      "$toggle_state_binding_name": "#is_creative_layout"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "scroll_grid_panel": {
+    "size": [ "100%", "100%c" ]
+  },
+
+  "recipe_inventory_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation":"insert_front",
+        "value": [
+          {
+            "console_creative_ui": {
+              "type": "panel",
+              "size": [ "100%", "100%" ],
+              "controls": [
+                {
+                  "back": {
+                    "type": "input_panel",
+                    "focus_enabled": false,
+                    "size": [ 240, 200 ],
+                    "button_mappings": [
+                      {
+                        "from_button_id": "button.menu_select",
+                        "to_button_id": "button.dummy",
+                        "mapping_type": "pressed"
+                      }
+                    ],
+                    "controls": [
+                      {
+                        "tab_navigation_panel@crafting.tab_navigation_panel_layout_console": {
+                          "size": [ "100%", 23 ],
+                          "offset": [ 0, 20 ],
+                          "anchor_from": "top_left",
+                          "anchor_to": "bottom_left",
+                
+                          "$is_search_right_most_tab": "#is_recipe_book_layout",
+                          "bindings": [
+                            {
+                              "binding_type": "global",
+                              "binding_name": "#is_recipe_book_layout"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "texture": {
+                          "type": "image",
+                          "texture": "textures/ui/dialog_background_opaque",
+                          "size": [ "100%", "100% - 20px" ],
+                          "anchor_from": "bottom_middle",
+                          "anchor_to": "bottom_middle",
+                          "controls": [
+                            {
+                              "label": {
+                                "type": "label",
+                                "size": [ "100%", 10 ],
+                                "offset": [ 0, 8 ],
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "color": "$title_text_color",
+                                "text": "#tab_label_text",
+                                "text_alignment": "center",
+                                "bindings": [
+                                  {
+                                    "binding_name": "#tab_label_text"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "scroll_pane": {
+                                "type": "stack_panel",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [ 0, 22 ],
+                                "size": [ "100%", 126 ],
+                                "controls": [
+                                  {
+                                    "search_box_panel": {
+                                      "type": "panel",
+                                      "size": [ "100%", 18 ],
+                                      "controls": [
+                                        {
+                                          "search_box@common.text_edit_box": {
+                                            "size": [ "100% - 42px", 16 ],
+                                            "offset": [ -3, 0 ],
+                      
+                                            "property_bag": {
+                                              "#property_field": "#item_name"
+                                            },
+                      
+                                            "max_length": 30,
+                                            "$place_holder_text": "seedPicker.search",
+                                            "$text_edit_binding_name": "#text_box_item_name",
+                                            "$text_edit_box_label_size": [ "default", 10 ],
+                                            "$text_edit_box_hovered_button_id": "button.search_bar_hovered",
+                                            "$text_edit_box_clear_to_button_id": "button.search_bar_clear",
+                                            "$text_edit_box_selected_to_button_id": "button.search_bar_selected",
+                                            "$text_edit_box_deselected_to_button_id": "button.search_bar_deselected",
+                      
+                                            "focus_wrap_enabled": false
+                                          }
+                                        }
+                                      ],
+                                      "bindings": [
+                                        {
+                                          "binding_name": "#is_left_tab_search",
+                                          "binding_name_override": "#visible"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "scr_view": {
+                                      "type": "scroll_view",
+                                      "size": [ "100%", "fill" ],
+                                      "scroll_speed": 15,
+                                      "scrollbar_track_button": "button.scrollbar_skip_track",
+                                      "scrollbar_touch_button": "button.scrollbar_touch",
+                                      "touch_mode": false,
+
+                                      "$scrolling_content": "crafting.scroll_grid_panel",
+                                      "scroll_content": "scrolling_content",
+                                      "scroll_view_port": "scrolling_view_port",
+                                      "scroll_box_and_track_panel": "scoll_box_and_track",
+                                      "scrollbar_track": "scr_track",
+                                      "scrollbar_box": "scr_box",
+
+                                      "always_listen_to_input": true,
+                                      "always_handle_pointer": true,
+                                      "always_handle_scrolling": false,
+
+                                      "$collection_name": "recipe_book",
+
+                                      "button_mappings": [
+                                        {
+                                          "from_button_id": "button.menu_select",
+                                          "to_button_id": "button.scrollbar_touch",
+                                          "mapping_type": "pressed",
+                                          "button_up_right_of_first_refusal": true
+                                        }
+                                      ],
+
+                                      "bindings": [
+                                        {
+                                          "binding_name": "#gesture_control_enabled"
+                                        }
+                                      ],
+                                      
+                                      "controls": [
+                                        {
+                                          "port_and_bar": {
+                                            "type": "panel",
+                                            "anchor_to": "top_left",
+                                            "anchor_from": "top_left",
+                                            "size": [ "100%", "100%" ],
+                                            "controls": [
+                                              {
+                                                "scrolling_view_port": {
+                                                  "layer": 1,
+                                                  "type": "panel",
+                                                  "anchor_from": "center",
+                                                  "anchor_to": "center",
+                                                  "clips_children": true,
+                                                  "size": [ "100% - 40px", "100%" ],
+                                                  "max_size": [ "100%", "100%" ],
+                                                  "offset": [ -3, 0 ],
+                                                  "controls": [
+                                                    {
+                                                      "scrolling_content@$scrolling_content": {
+                                        
+                                                        "layer": 1,
+                                                        "anchor_from": "top_left",
+                                                        "anchor_to": "top_left"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              {
+                                                "scoll_box_and_track": {
+                                                  "type": "panel",
+                                                  "size": [ "100%c", "100%" ],
+                                                  "offset": [ -3, 0 ],
+                                                  "clips_children": true,
+                                                  "anchor_from": "right_middle",
+                                                  "anchor_to": "right_middle",
+                                                  "controls": [
+                                                    {
+                                                      "back_image": {
+                                                        "type": "image",
+                                                        "texture": "textures/ui/cell_image",
+                                                        "size": [ 10, "100%" ]
+                                                      }
+                                                    },
+                                                    {
+                                                      "panel": {
+                                                        "type": "panel",
+                                                        "size": [ "100%c", "100%" ],
+                                                        "controls": [
+                                                          {
+                                                            "centered_panel": {
+                                                              "type": "panel",
+                                                              "size": [ 10, "100%" ],
+                                                              "anchor_from": "center",
+                                                              "anchor_to": "center",
+                                                              "offset": [ 0, 0 ],
+                                                              "controls": [
+                                                                {
+                                                                  "scr_track": {
+                                                                    "type": "scroll_track",
+                                                                    "size": [ "100%", "100%" ],
+                                                                    "layer": 10,
+                                                                    "anchor_from": "center",
+                                                                    "anchor_to": "center",
+                                                                    "button_mappings": [
+                                                                      {
+                                                                        "from_button_id": "button.menu_select",
+                                                                        "to_button_id": "button.scrollbar_skip_track",
+                                                                        "mapping_type": "pressed"
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "scrbox": {
+                                                                    "type": "panel",
+                                                                    "layer": 12,
+                                                                    "controls": [
+                                                                      {
+                                                                        "scr_box": {
+                                                                          "type": "scrollbar_box",
+                                                                          "anchor_to": "top_left",
+                                                                          "anchor_from": "top_left",
+                                                                          "contained": true,
+                                                                          "layer": 12,
+                                                                          "draggable": "vertical",
+                                                                          "button_mappings": [
+                                                                            {
+                                                                              "from_button_id": "button.menu_select",
+                                                                              "to_button_id": "button.menu_select",
+                                                                              "mapping_type": "pressed",
+                                                                              "button_up_right_of_first_refusal": true
+                                                                            }
+                                                                          ],
+                                                                          "controls": [
+                                                                            {
+                                                                              "back_image": {
+                                                                                "type": "image",
+                                                                                "texture": "textures/ui/dialog_background_opaque",
+                                                                                "size": [ "100%", "100%" ]
+                                                                              }
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "hotbar_grid@common.hotbar_grid_template": {
+                                "offset": [ 0, -6 ],
+                                "anchor_from": "bottom_middle",
+                                "anchor_to": "bottom_middle",
+                
+                                "$button_ref": "crafting.creative_hotbar_container_slot_button"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "inventory_touch_close": {
+                    "type": "image",
+                    "size": [ 23, 23 ],
+                    "offset": [ 138, -90 ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "texture": "textures/ui/White",
+                    "alpha": 0.8,
+                    "visible": "$touch",
+                    "$close_button_offset": [ 0, 0 ],
+                    "controls": [
+                      {
+                        "close_button@common.close_button": {
+                          "anchor_from": "center",
+                          "anchor_to": "center",
+                          "bindings": [
+                            {
+                              "binding_name": "#tts_enabled",
+                              "binding_name_override": "#focus_enabled"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "bindings": [
+                {
+                  "binding_name": "#is_creative_layout",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 {
   "ui_defs": [
-    "ui/cui_assets.json"
+    "ui/_change_logs.json",
+    "ui/cui_assets.json",
+    "ui/world_load_screen.json"
   ]
 }

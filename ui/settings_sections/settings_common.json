@@ -1,5 +1,10 @@
 {
   "namespace": "settings_common",
+
+  "settings_content/background": {
+    "color": [ 0.6, 0.6, 0.6 ],
+    "alpha": 1
+  },
   
   "option_toggle_state_template": {
     "size": [ 16, 16 ]
@@ -8,7 +13,7 @@
   "option_toggle@settings_common.option_generic": {
     "$control_name": "settings_common.option_toggle_control",
     "$option_label|default": "",
-    "$label_offset": [ 20, 0 ],
+    "$label_offset": [ 20, 2.5 ],
     "$toggle_tts_header": "$option_label",
     "variables": [
       {
@@ -16,5 +21,18 @@
         "$one_line_layout": true
       }
     ]
+  },
+
+  "option_slider_control": {
+    "size": [ "100%", 18 ]
+  },
+
+  "option_slider_control/slider": {
+    "size": [ "100%-9px", 18 ],
+    "offset": [ 0, 0 ]
+  },
+  
+  "option_slider": {
+    "$show_option_label": false
   }
 }

@@ -3,7 +3,7 @@
   
   "main_buttons_panel": {
     "type": "panel",
-    "size": [ 250, "100%c" ],
+    "size": [ 200, "100%c" ],
     "controls": [
       {
         "stacked_rows": {
@@ -19,7 +19,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -32,7 +32,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -41,12 +41,12 @@
             {
               "settings_button_panel": {
                 "type": "panel",
-                "size": [ 250, 20 ],
+                "size": [ 200, 20 ],
                 "layer": 90,
                 "controls": [
                   {
                     "settings_button@pause.option": {
-                      "size": [ 250, 20 ],
+                      "size": [ 200, 20 ],
                       "$toggle_view_binding_name": "option_page",
                       "$button_text": "menu.settings",
                       "$toggle_group_forced_index": 100
@@ -76,7 +76,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -89,7 +89,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             }
           ]
@@ -108,7 +108,7 @@
   
   "options_button_panel": {
     "type": "panel",
-    "size": [ 250, "100%c" ],
+    "size": [ 200, "100%c" ],
     "controls": [
       {
         "stacked_rows": {
@@ -124,7 +124,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -137,7 +137,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -150,18 +150,16 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ],
-
-                "ignored": true
+                "size": [ 200, 20 ]
               }
             },
             {
-              "padding_03": { "type": "panel", "size": [ 0, 2 ],    "ignored": true }
+              "padding_03": { "type": "panel", "size": [ 0, 2 ] }
             },
             {
               "realms_button_panel": {
                 "type": "panel",
-                "size": [ 250, 20 ],
+                "size": [ 200, 20 ],
                 "layer": 90,
                 "controls": [
                   {
@@ -170,12 +168,13 @@
                       "$button_text": "realmsInvitationScreen.shareTitle",
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
-                      "size": [ 250, 20 ]
+                      "size": [ 200, 20 ]
                     }
                   },
                   {
                     "count@start.notification_button_text_panel": {
                       "offset": [ -2.5, 2 ],
+                      "layer": 91,
                       "bindings": [
                         {
                           "binding_name": "#realms_notification_visible",
@@ -192,7 +191,7 @@
             },
             {
               "back_button@pause.option": {
-                "size": [ 250, 20 ],
+                "size": [ 200, 20 ],
                 "$checked_control": "common_toggles.toggle_unchecked",
                 "$checked_hover_control": "common_toggles.toggle_unchecked_hover",
                 "layer": 90,
@@ -203,9 +202,6 @@
 
                 "$template_toggle": "cui.close_toggle"
               }
-            },
-            {
-              "padding_05": { "type": "panel", "size": [ 0, 22 ] }
             }
           ]
         }
@@ -295,17 +291,29 @@
 
   "start_screen_content": {
     "type": "panel",
-    "$achievements_ignored|default": true,
-    "$feedback_ignored|default": true,
+    "$achievements_ignored": true,
+    "$feedback_ignored": true,
     "controls": [
       {
         "main_buttons_and_title_panel@start.main_buttons_stack_panel": {}
       },
       {
-        "upper_online_buttons_panel@start.upper_online_buttons_panel": {}
-      },
-      {
-        "lower_online_buttons_panel@start.lower_online_buttons_panel": {}
+        "online_button_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "anchor_to": "bottom_left",
+          "anchor_from": "bottom_left",
+          "size": [ "50% - 75px", "100%c" ],
+          "offset": [ 0, "-10%" ],
+          "controls": [
+            {
+              "gathering_panel@start.gathering_panel": {}
+            },
+            {
+              "upper_online_buttons_panel@start.upper_online_buttons_panel": {}
+            }
+          ]
+        }
       },
       {
         "skin_panel@start.skin_panel": { "layer": 1 }

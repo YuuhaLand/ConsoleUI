@@ -1,0 +1,122 @@
+{
+  "namespace": "death",
+
+  "death_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "gameover_and_buttons": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "gameover": {
+                "type": "label",
+                "color": "$death_text_color",
+                "size": [ "100%", 20 ],
+                "text_alignment": "center",
+                "text": "deathScreen.message",
+                "shadow": true,
+                "font_size": "large"
+              }
+            },
+            {
+              "padding_01": {
+                "type": "panel",
+                "size": [ 0, 10 ]
+              } 
+            },
+            {
+              "death_cause": {
+                "type": "label",
+                "color": "$death_text_color",
+                "size": [ "100%", 10 ],
+                "text_alignment": "center",
+                "text": "#death_reason_text",
+                "shadow": true,
+                "bindings": [
+                  {
+                    "binding_name": "#death_reason_text"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_02": {
+                "type": "panel",
+                "size": [ 0, 20 ]
+              } 
+            },
+            {
+              "respawn_button_panel": {
+                "type": "panel",
+                "size": [ "100%", 20],
+                "controls": [
+                  {
+                    "respawn_button@common_buttons.light_text_button": {
+                      "$pressed_button_name": "button.respawn_button",
+                      "$button_text": "deathScreen.respawn",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 90,
+                      "size": [ 200, 20 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding_03": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "quit_button_panel": {
+                "type": "panel",
+                "size": [ "100%", 20],
+                "controls": [
+                  {
+                    "quit_button@common_buttons.light_text_button": {
+                      "$pressed_button_name": "button.main_menu_button",
+                      "variables": [
+                        {
+                          "requires": "$is_secondary_client",
+                          "$button_text": "deathScreen.quit.secondaryClient"
+                        }
+                      ],
+                      "$quit_button_enabled|default": true,
+                      "$button_text": "deathScreen.quit",
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle",
+                      "layer": 90,
+                      "enabled": "$quit_button_enabled",
+                      "size": [ 200, 20 ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "loading_label": {
+          "type": "label",
+          "color": "$title_command_text_color",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, "85%" ],
+          "text": "progressScreen.generating",
+          "font_size": "normal",
+          "bindings": [
+            {
+              "binding_name": "#loading_message_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

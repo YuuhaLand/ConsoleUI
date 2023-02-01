@@ -47,67 +47,20 @@
           "size": [ "100%", "fill" ]
         }
       }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "host_option",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
     ]
   },
 
   "player_gamertag": {
+    "shadow": true,
     "color": "$text_color"
-  },
-  
-  "player_grid_item_content": {
-    "type": "panel",
-
-    "controls": [
-      {
-        "player_button_panel": {
-          "type": "stack_panel",
-          "orientation": "horizontal",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "size": [ "100%", "100% + 1px" ],
-          "controls": [
-            {
-              "player_button_banner": {
-                "type": "panel",
-                "size": [ "fill", "100%" ],
-                "controls": [
-                  { "player_button@pause.player_button": {} }
-                ]
-              }
-            },
-            {
-              "player_permission_button_padding": {
-                "type": "panel",
-                "size": [ 27, "100%" ],
-                "bindings": [
-                  {
-                    "binding_name": "#permissions_button_visible",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "player_permission_button_panel": {
-          "type": "panel",
-          "anchor_to": "top_right",
-          "anchor_from": "top_right",
-          "size": [ "100%c", "100% + 1px" ],
-          "controls": [
-            { "player_permission_button@pause.player_permission_button": {} }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#permissions_button_visible",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      }
-    ]
   },
 
   "main_buttons_panel": {
@@ -116,7 +69,7 @@
       {
         "ty": {
           "type": "panel",
-          "size": [ 250, "100%c" ],
+          "size": [ 200, "100%c" ],
           "controls": [
             {
               "stacked_rows": {
@@ -132,7 +85,7 @@
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "layer": 90,
-                      "size": [ 250, 20 ]
+                      "size": [ 200, 20 ]
                     }
                   },
                   {
@@ -140,7 +93,7 @@
                   },
                   {
                     "settings_button@pause.option": {
-                      "size": [ 250, 20 ],
+                      "size": [ 200, 20 ],
                       "$toggle_view_binding_name": "option_page",
                       "$button_text": "menu.settings",
                       "$toggle_group_forced_index": 100
@@ -156,7 +109,7 @@
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "layer": 90,
-                      "size": [ 250, 20 ]
+                      "size": [ 200, 20 ]
                     }
                   },
                   {
@@ -164,7 +117,7 @@
                   },
                   {
                     "playerlist_button@pause.host_option": {
-                      "size": [ 250, 20 ],
+                      "size": [ 200, 20 ],
                       "$toggle_view_binding_name": "host_option",
                       "$button_text": "key.playerlist",
                       "$toggle_group_forced_index": 100
@@ -175,7 +128,7 @@
                   },
                   {
                     "quit_button@pause.leave_world": {
-                      "size": [ 250, 20 ],
+                      "size": [ 200, 20 ],
                       "$toggle_view_binding_name": "leave_world",
                       "$button_text": "pauseScreen.secondaryClientLeave",
                       "$toggle_group_forced_index": 100
@@ -208,7 +161,7 @@
 
   "option_buttons_panel": {
     "type": "panel",
-    "size": [ 250, "100%c" ],
+    "size": [ 200, "100%c" ],
     "controls": [
       {
         "stacked_rows": {
@@ -224,7 +177,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -237,7 +190,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -250,7 +203,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -263,7 +216,7 @@
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "layer": 90,
-                "size": [ 250, 20 ]
+                "size": [ 200, 20 ]
               }
             },
             {
@@ -271,7 +224,7 @@
             },
             {
               "back_button@pause.option": {
-                "size": [ 250, 20 ],
+                "size": [ 200, 20 ],
                 "$checked_control": "common_toggles.toggle_unchecked",
                 "$checked_hover_control": "common_toggles.toggle_unchecked_hover",
             
@@ -303,7 +256,7 @@
       {
         "main": {
           "type": "panel",
-          "size": [ 250, "100%c" ],
+          "size": [ 200, "100%c" ],
           "controls": [
             {
               "stacked_rows": {
@@ -320,7 +273,7 @@
                       "anchor_from": "top_middle",
                       "anchor_to": "top_middle",
                       "layer": 90,
-                      "size": [ 250, 20 ],
+                      "size": [ 200, 20 ],
                       "bindings": [
                         {
                           "binding_name": "#invite_button_enabled",
@@ -335,7 +288,7 @@
                   {
                     "player_list_back": {
                       "type": "image",
-                      "size": [ 250, 200 ],
+                      "size": [ 200, 160 ],
                       "texture": "textures/ui/dialog_background_opaque",
                       "controls": [
                         {
@@ -376,19 +329,19 @@
         }
       },
       {
-        "touch_close_button@common.button": {
-          "size": [ 13, 13 ],
-          "offset": [ -2, 2 ],
-          "$pressed_button_name": "button.menu_exit",
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "ignored": "(not $touch)",
+        "touch_close_button": {
+          "type": "image",
+          "size": [ 23, 23 ],
+          "offset": [ 145, -110 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "texture": "textures/ui/White",
+          "alpha": 0.8,
+          "visible": "$touch",
           "controls": [
             {
-              "texture": {
-                "type": "image",
-                "size": [ 13, 13 ],
-                "texture": "textures/ui/cancel"
+              "close_button@cui.close_button": {
+                "$toggle_name": "host_option"
               }
             }
           ]
@@ -540,6 +493,7 @@
       }
     ],
     "controls": [
+      { "pause_screen_main_panels@pause.main_buttons_stack_panel": {} },
       {
         "pause_screen_s": {
           "type": "panel",
@@ -548,7 +502,6 @@
               "pause_screen_s": {
                 "type": "panel",
                 "controls": [
-                  { "pause_screen_main_panels@pause.main_buttons_stack_panel": {} },
                   { "main_buttons_panel@pause.main_buttons_panel": {} },
                   { "option_buttons_panel@pause.option_buttons_panel": {} },
                   {
@@ -633,6 +586,8 @@
               "close_toggle@cui.close_dlga_esc": {
                 "layer": 1,
                 "size": [ "100%", "100%" ],
+                "sound_volume": 1.0,
+                "$return_sound": true,
                 "$toggle_name": "host_option",
                 "$toggle_default_state": true,
                 "$toggle_group_forced_index": 0
@@ -750,6 +705,87 @@
           "color": "$title_text_color",
           "size": [ "100%", "default" ],
           "text": "deathScreen.quit.confirmToMainMenuWarning"
+        }
+      }
+    ]
+  },
+
+  "player_button@common_buttons.dark_content_button": {
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$button_content": "pause.player_button_content",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.player_profile_card",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.player_profile_card",
+        "mapping_type": "focused"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "players_collection"
+      }
+    ]
+  },
+
+  "player_grid_item_content": {
+    "type": "panel",
+
+    "controls": [
+      {
+        "player_button_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100%", "100% + 1px" ],
+          "controls": [
+            {
+              "player_button_banner": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  { "player_button@pause.player_button": {} }
+                ]
+              }
+            },
+            {
+              "player_permission_button_padding": {
+                "type": "panel",
+                "size": [ 27, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#permissions_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "player_permission_button_panel": {
+          "type": "panel",
+          "anchor_to": "top_right",
+          "anchor_from": "top_right",
+          "size": [ "100%c", "100% + 1px" ],
+          "controls": [
+            { "player_permission_button@pause.player_permission_button": {} }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#permissions_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
         }
       }
     ]
