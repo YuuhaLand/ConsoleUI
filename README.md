@@ -9,11 +9,13 @@
 他にUI変更リソースパックを使用している場合、ConsoleUIを上位にしないと上手く動作しない可能性があります。  
 
 ## どんなUIになる?
-v1.0.0時点では、スタート画面、ワールドロード画面、プログレス画面、ポーズ画面などがサポートされています。  
+対応している画面の一部です。  
 ![スタート画面](https://gotemba912.github.io/minecraft_addons/images/cui_1.png "スタート画面")
 ![ワールドロード画面](https://gotemba912.github.io/minecraft_addons/images/cui_2.png "ワールドロード画面")
-![プログレス画面](https://gotemba912.github.io/minecraft_addons/images/cui_3.png "ワールドロード画面")
-![ポーズ画面](https://gotemba912.github.io/minecraft_addons/images/cui_4.png "ワールドロード画面")
+![プログレス画面](https://gotemba912.github.io/minecraft_addons/images/cui_3.png "プログレス画面")
+![ポーズ画面](https://gotemba912.github.io/minecraft_addons/images/cui_4.png "ポーズ画面")
+![ワールド設定画面](https://gotemba912.github.io/minecraft_addons/images/cui_5.png "ワールド設定画面")
+![クリエイティブインベントリ画面](https://gotemba912.github.io/minecraft_addons/images/cui_6.png "クリエイティブインベントリ画面")
 
 ## 注意
 このパックのコードなどは、自由にコピー・改変・他のパックへの組み込み出来ます。  
