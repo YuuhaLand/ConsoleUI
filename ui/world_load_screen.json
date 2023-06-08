@@ -2051,7 +2051,8 @@
                           "grass": {
                             "type": "image",
                             "size": [ 26, 26 ],
-                            "texture": "textures/blocks/grass_side_carried",
+                            "texture": "resource_packs/vanilla/textures/blocks/grass_side_carried",
+                            "texture_file_system": "InAppPackage",
                             "offset": [ 68, -2 ],
                             "anchor_from": "top_left",
                             "anchor_to": "top_left",
@@ -2173,7 +2174,7 @@
                 "controls": [
                   {
                     "respack_screen@common_dialogs.main_panel_no_buttons": {
-                      "layer": 503,
+                      "layer": 10,
                       "size": [ "80%", "80%" ],
                       "$text_name": "menu.resourcepacks",
                       "$show_close_button": false,
@@ -2198,7 +2199,7 @@
                 "controls": [
                   {
                     "behpack_screen@common_dialogs.main_panel_no_buttons": {
-                      "layer": 503,
+                      "layer": 10,
                       "size": [ "80%", "80%" ],
                       "$text_name": "menu.behaviors",
                       "$show_close_button": false,

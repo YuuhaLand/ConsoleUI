@@ -16,6 +16,8 @@ hbui.CreateNewWorld.resourcePacks.globalMinecraftPackDescription=Minecraft 正�
 
 pauseScreen.secondaryClientLeave=ゲームを終了
 
+cui.cl.v111.1=1.20以降で看板のテキスト編集画面が開けないバグを直しました。
+cui.cl.v111.2=Chromebookで、パック情報画面が開けないバグを直しました。
 
 cui.cl.v110.1=新たに「クリエイティブインベントリ画面」と、「ワールド設定画面」と、「死亡画面」をサポートしました。
 cui.cl.v110.2=「切断画面」に背景を追加しました。

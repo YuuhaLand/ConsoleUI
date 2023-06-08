@@ -5,6 +5,7 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%c", 20 ],
+    "layer": 10,
     "controls":[
       {
         "sign_edit": {
@@ -27,7 +28,7 @@
     ]
   },
 
-  "sign_text_multiline": {
+  "base_sign_text_multiline": {
     "offset": [ 0, -10 ]
   },
 
@@ -47,7 +48,7 @@
           "focus_enabled": false,
           "$virtual_keyboard_buffer_control": "text_edit",
           "controls": [
-            { "text_edit@sign.sign_text_multiline": {} }
+            { "text_edit@$sign_text_multiline": {} }
           ]
         }
       },
@@ -74,7 +75,7 @@
           "anchor_from": "center",
           "anchor_to": "center",
           "layer": 1,
-          "size": [ 250, 20 ],
+          "size": [ 200, 20 ],
           "offset": [ 0, 75 ],
           "button_mappings": [
             {

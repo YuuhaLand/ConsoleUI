@@ -15,6 +15,8 @@ resourcePack.vanilla.name=Minecraft
 resourcePack.vanilla.description=The classic Minecraft textures, icons and user interface!
 hbui.CreateNewWorld.resourcePacks.globalMinecraftPackDescription=The classic Minecraft textures, icons and user interface!
 
+cui.cl.v111.1=Fixed a bug that prevented opening the text edit screen for signs after 1.20.
+cui.cl.v111.2=Fixed a bug that prevented the pack info screen from opening on Chromebook.
 
 cui.cl.v110.1=Newly supported "Creative Inventory Screen", "World Settings Screen" and "Death Screen".
 cui.cl.v110.2=Added a background to the "Disconnection Screen".

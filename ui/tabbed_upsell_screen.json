@@ -656,6 +656,7 @@
       "@common.screen_entrance_animation_pop_alpha"
     ],
     "force_render_below": false,
-    "$screen_content": "tabbed_upsell.cui_info_screen"
+    "$screen_content": "tabbed_upsell.cui_info_screen",
+    "$screen_bg_content": "common.empty_panel"
   }
 }

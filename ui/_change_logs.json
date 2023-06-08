@@ -6,6 +6,17 @@
     "size": [ "100%", "100%c" ],
     "controls": [
       {
+        "v111@tabbed_upsell.version_section2": {
+          "$version": "v1.1.1",
+          "$details_controls": [
+            { "date@tabbed_upsell.text": { "text": "2023/06/08" }},
+            { "padding01": { "type": "panel", "size": [ 0, 10 ] }},
+            { "fp1_@cui.features_text_with_bubble":{"$text":"cui.cl.v111.1"}},
+            { "fp2_@cui.features_text_with_bubble":{"$text":"cui.cl.v111.2"}}
+          ]
+        }
+      },
+      {
         "v110@tabbed_upsell.version_section2": {
           "$version": "v1.1.0",
           "$details_controls": [

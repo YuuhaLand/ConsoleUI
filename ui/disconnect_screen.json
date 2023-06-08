@@ -6,7 +6,7 @@
     "size": [ "60%", "60%" ],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
-    "offset": [ 0, -30 ],
+    "offset": [ 0, "-6%" ],
     "texture": "textures/ui/dialog_background_opaque",
     "controls": [
       {
@@ -145,6 +145,11 @@
   "disconnect_screen_content": {
     "type": "panel",
     "controls": [
+      {
+        "title_panel_content@common_art.title_panel_content": {
+          "$splash_text_visible": false
+        }
+      },
       {
         "player_list_back@disconnect.player_list_back": {}
       }
