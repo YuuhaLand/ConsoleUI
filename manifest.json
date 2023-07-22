@@ -1,9 +1,9 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Legacy GameConsole UI v1.1.1",
+    "name": "Legacy GameConsole UI v1.1.2",
     "description": "従来のコンソール版Minecraft風のUI\nCreated by Yuka0745(@Gotemba912)",
-    "version": [ 1, 1, 1 ],
+    "version": [ 1, 1, 2 ],
     "uuid": "1ca0040f-6f48-4cec-b32e-ced3a4f4d5db",
     "min_engine_version": [ 1, 13, 0 ]
   },
@@ -11,7 +11,7 @@
     {
       "type": "resources",
       "description": "",
-      "version": [ 1, 1, 1 ],
+      "version": [ 1, 1, 2 ],
       "uuid": "82d5e795-3eef-41a0-8503-3a41ae759143"
     }
   ]
